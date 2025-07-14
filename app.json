@@ -33,7 +33,7 @@
   "formation": {
     "worker": {
       "quantity": 1,
-      "size": "basic"  // or "hobby", "standard-1x", etc. — depending on your plan
+      "size": "basic"
     }
   },
   "stack": "heroku-22"
