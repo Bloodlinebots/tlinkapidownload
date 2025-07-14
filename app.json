@@ -1,27 +1,27 @@
 {
   "name": "Terabox Downloader Bot",
-  "description": "A Telegram bot that downloads and uploads Terabox links using session string and MongoDB.",
-  "repository": "https://github.com/your/repo",
-  "keywords": ["telegram", "telethon", "ffmpeg", "mongodb", "terabox"],
+  "description": "Heroku-based Telegram userbot that downloads & uploads Terabox videos using string session.",
+  "repository": "https://github.com/your/repo",  
+  "keywords": ["telegram", "terabox", "ffmpeg", "telethon", "heroku"],
   "env": {
     "API_ID": {
-      "description": "Your Telegram API ID from my.telegram.org",
+      "description": "Your Telegram API ID",
       "required": true
     },
     "API_HASH": {
-      "description": "Your Telegram API Hash",
+      "description": "Your Telegram API HASH",
       "required": true
     },
     "SESSION_STRING": {
-      "description": "Telethon session string of your user account",
-      "required": true
-    },
-    "BOT_TOKEN": {
-      "description": "Telegram bot token from @BotFather",
+      "description": "Telethon String Session (User)",
       "required": true
     },
     "MONGO_URI": {
-      "description": "Your MongoDB connection URI",
+      "description": "Your MongoDB Atlas URI",
+      "required": true
+    },
+    "BOT_USERNAME": {
+      "description": "Telegram username where files will be sent (e.g. Tharki_hub_bot)",
       "required": true
     }
   },
@@ -29,12 +29,5 @@
     {
       "url": "heroku/python"
     }
-  ],
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "basic"
-    }
-  },
-  "stack": "heroku-22"
+  ]
 }
